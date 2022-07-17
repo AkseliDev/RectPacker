@@ -58,14 +58,34 @@ public class Packer {
         }
     }
 
+    /// <summary>
+    /// Maximum possible size of the packed area
+    /// </summary>
     public const int MaxSize = ushort.MaxValue / 2;
 
+    /// <summary>
+    /// Width of the packed area
+    /// </summary>
     public int Width { get; }
+
+    /// <summary>
+    /// Height of the packed area
+    /// </summary>
     public int Height { get; }
 
+    /// <summary>
+    /// Row states of the packed area
+    /// </summary>
     private List<RowState> _rows;
-    private List<DirtyRect> _dirtyRegions;
+    
+    // TODO private List<DirtyRect> _dirtyRegions;
 
+    /// <summary>
+    /// Initializes a new instance of a rect packer. The given width and height are rounded up to power of 2s.
+    /// </summary>
+    /// <param name="width">Width of the area</param>
+    /// <param name="height">Height of the area</param>
+    /// <exception cref="ArgumentOutOfRangeException">If the width or height exceed the maximum size of the packed area <see cref="MaxSize"/></exception>
     public Packer(int width, int height) {
         
         if ((uint)width > MaxSize || (uint)height > MaxSize) {
@@ -77,7 +97,8 @@ public class Packer {
         Height = (int)BitOperations.RoundUpToPowerOf2((uint)height);
 
         _rows = new List<RowState>();
-        _dirtyRegions = new List<DirtyRect>();
+        
+        // TODO _dirtyRegions = new List<DirtyRect>();
     }
 
     /// <summary>
@@ -159,7 +180,7 @@ public class Packer {
             // add the rects to dirty rects list
             var rect = new Rect(row.X - size.Width, row.Y, size.Width, size.Height);
 
-            _dirtyRegions.Add(new DirtyRect(rect, foundIndex));
+            // TODO _dirtyRegions.Add(new DirtyRect(rect, foundIndex));
 
             return rect;
         }
