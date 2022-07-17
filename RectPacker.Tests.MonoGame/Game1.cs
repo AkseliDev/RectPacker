@@ -18,8 +18,8 @@ namespace Game2 {
 
         protected override void Initialize() {
             // TODO: Add your initialization logic here
-            _graphics.PreferredBackBufferWidth = 1800;
-            _graphics.PreferredBackBufferHeight = 1050;
+            _graphics.PreferredBackBufferWidth = 1024;
+            _graphics.PreferredBackBufferHeight = 1024;
             _graphics.ApplyChanges();
             base.Initialize();
         }
