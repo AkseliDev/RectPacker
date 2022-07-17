@@ -13,3 +13,8 @@ Used correctly the packer should reach results like this:
  
  Another picture with some padding adding to help to distinguish other sprites:
  ![results](https://user-images.githubusercontent.com/96961979/179387526-9e7f0846-6c30-4ef4-96e1-a3af711d06c9.png)
+ 
+ See [Tests/MonoGame](https://github.com/AkseliDev/RectPacker/tree/master/RectPacker.Tests.MonoGame)
+ 
+## License
+The project is under the GNU General Public License v3.0. See the [LICENSE.md](https://github.com/AkseliDev/RectPacker/blob/master/LICENSE.md) file for more details.
