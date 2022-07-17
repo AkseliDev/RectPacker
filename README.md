@@ -10,3 +10,6 @@ Used correctly the packer should reach results like this:
  - Where black color represents the empty space
  
  ![results](https://user-images.githubusercontent.com/96961979/179387452-fea619b1-d0d7-46c0-9fb8-83ec897f14cb.png)
+ 
+ Another picture with some padding adding to help to distinguish other sprites:
+ ![results](https://user-images.githubusercontent.com/96961979/179387526-9e7f0846-6c30-4ef4-96e1-a3af711d06c9.png)
