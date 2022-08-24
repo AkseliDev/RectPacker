@@ -7,56 +7,7 @@ using System.Threading.Tasks;
 
 namespace RectPacker;
 
-public struct Rect {
-    
-    public int X;
-    public int Y;
-    public int Width;
-    public int Height;
-    
-    public Rect(int x, int y, int width, int height) {
-        X = x;
-        Y = y;
-        Width = width;
-        Height = height;
-    }
-}
-
-public struct Size {
-    
-    public int Width;
-    public int Height;
-
-    public Size(int width, int height) {
-        Width = width;
-        Height = height;
-    }
-}
-
 public class Packer {
-
-    struct RowState {
-        public int Height;
-        public int X;
-        public int Y;
-        
-        public RowState(int height, int x, int y) {
-            Height = height;
-            X = x;
-            Y = y;
-        }
-    }
-    
-    struct DirtyRect {
-        
-        public Rect Rect;
-        public int RowIndex;
-
-        public DirtyRect(Rect rect, int rowIndex) {
-            Rect = rect;
-            RowIndex = rowIndex;
-        }
-    }
 
     /// <summary>
     /// Maximum possible size of the packed area
@@ -76,7 +27,7 @@ public class Packer {
     /// <summary>
     /// Row states of the packed area
     /// </summary>
-    private List<RowState> _rows;
+    private readonly List<RowState> _rows;
     
     // TODO private List<DirtyRect> _dirtyRegions;
 
